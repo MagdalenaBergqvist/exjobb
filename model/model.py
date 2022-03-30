@@ -1,3 +1,31 @@
+import sys
+
+#Function used for game loop
+def model(args):
+    game_state = inital_state()
+    print_instructions()
+    print_values(game_state)
+
+    for input in args:
+        if(check_input(input)):
+            rate = int(input)
+            time_update(game_state)
+            fuel_update(game_state, rate)
+            print_values(game_state)
+        else:
+            print_error()
+
+#Function used to print game state
+def print_values(game_state):
+    gap = "       "
+    string = gap + str(game_state["time"]) + gap + str(game_state["alt"]) + gap + str(game_state["miles"]) + gap + str(game_state["speed"])+ "0" + gap + str(game_state["fuel"]) + gap + "K=:"
+    print(string, end="")
+
+def print_error():
+    string = "NOT POSSIBLE...................................................K=:"
+    print(string, end="")
+
+#Function used to print game instructions at the begining of the game
 def print_instructions():
     print("")
     print("CONTROL CALLING LUNAR MODULE. MANUAL CONTROL IS NECESSARY")
