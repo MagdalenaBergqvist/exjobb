@@ -16,7 +16,7 @@ var lunarcontrol = (function(myLunarCalc) {
    * myInOut is an object implementing two functions log and prompt.
    * log should accept a string for output and prompt should accept a string for output
    * and a callback function for input. The callback should be called with the string input.
-   * 
+   *
    * myControlOutCallback is called, when user choose 'CONTROL OUT'.
    */
   var run = function(myInOut, myControlOutCallback) {
@@ -33,15 +33,15 @@ var lunarcontrol = (function(myLunarCalc) {
   /**
    * round(1.1234, 2) = "1.12"
    * round(1.995, 2) = "2.00"
-   * 
-   * @param {Number} x 
-   * @param {Integer} d digits, d > 0 
+   *
+   * @param {Number} x
+   * @param {Integer} d digits, d > 0
    * @returns {String}
    */
   var round = function(x, d) {
 
     var pow = Math.pow(10, d);
-    var x = Math.round(x * pow) / pow; 
+    var x = Math.round(x * pow) / pow;
     var trunc = Math.trunc(x);
     var decimals = Math.abs(x - trunc);
     trunc = Math.abs(trunc);
@@ -105,7 +105,7 @@ var lunarcontrol = (function(myLunarCalc) {
 
   /**
    * @param {*} value
-   * @returns {String} 
+   * @returns {String}
    */
   var getResultLine = function(value) {
     var L = value.time;

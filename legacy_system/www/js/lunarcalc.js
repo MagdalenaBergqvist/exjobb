@@ -1,7 +1,7 @@
 /**
  * Transcription of Storer's lunar lander FOCAL code to JavaScript.
  * Variable names and line numbers are taken from there. See:
- * https://www.cs.brandeis.edu/~storer/LunarLander/LunarLander/LunarLanderListing.jpg 
+ * https://www.cs.brandeis.edu/~storer/LunarLander/LunarLander/LunarLanderListing.jpg
  */
 
 var lunarcalc = {};
@@ -14,6 +14,7 @@ lunarcalc.createIterator = function() {
   // Initial values; state of the iterator
   var L = 0; // Time (seconds)
   var A = 120; // Altitude (miles)
+
   var V = 1; // Velocity (miles/second)
   var M = 32500; // Total weight (LBS)
 
@@ -74,7 +75,7 @@ lunarcalc.createIterator = function() {
         break;
       }
 
-      // 
+      //
       if (V > 0 && J < 0) {
         var result = calcDeepestPoint();
         if (result === "onTheMoon") {
@@ -148,7 +149,7 @@ lunarcalc.createIterator = function() {
         return "onTheMoon";
       }
       transferNewValues();
-      // Always true. A joke? 
+      // Always true. A joke?
       if (J >= 0 || V <= 0) {
         return "continue";
       }
