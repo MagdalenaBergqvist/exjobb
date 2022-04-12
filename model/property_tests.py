@@ -27,14 +27,14 @@ def test_fuel_level(a,b,c,d,e,rate):
     fuel_update(game_state, rate)
     assert(e >= game_state["fuel"])
 
-Tests that free falling does not decrease speed
+#Tests that free falling does not decrease speed
 @given(a = integers().filter(lambda x: (x >= 0)), b = integers().filter(lambda x: (x > 0)), c = integers().filter(lambda x: (x >= 0)), d = integers().filter(lambda x: (x >= 0 and x < 1000000)), e = integers().filter(lambda x: (x >= 0)))
 def test_free_falling_speed(a,b,c,d,e):
     game_state = {"time": a, "alt": b, "miles": c, "speed": d, "fuel": e}
     free_falling(game_state)
     assert(d <= game_state["speed"])
 
-Tests that time of free falling can not be negative
+#Tests that time of free falling can not be negative
 @given(a = integers().filter(lambda x: (x >= 0)), b = integers().filter(lambda x: (x >= 0)), c = integers().filter(lambda x: (x >= 0)), d = integers().filter(lambda x: (x >= 0)), e = integers().filter(lambda x: (x >= 0)))
 def test_free_falling_time(a,b,c,d,e):
     game_state = {"time": a, "alt": b, "miles": c, "speed": d, "fuel": e}
