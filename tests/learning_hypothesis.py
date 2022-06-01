@@ -10,6 +10,6 @@ def fail_sort(list):
 def test_sort(lista):
     assert(fail_sort(lista) == sorted(lista))
 
-@given(lists(integers()))
+"""@given(lists(integers()))
 def test_sortxd(lista):
-    assert(fail_sort(lista) == sorted(lista[0]))
+    assert(fail_sort(lista) == sorted(lista[0]))"""

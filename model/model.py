@@ -5,7 +5,7 @@ import time
 gravity = 0.001
 fuel_out_at = 0
 mass = 32500 # Total weight (LBS)
-velocity_calc = 1
+velocity_calc = 1 #Helper variable for calculations
 
 
 #Function used for game loop
@@ -111,11 +111,11 @@ def free_falling(game_state):
 #Function used to print game instructions at the begining of the game
 def print_instructions():
     print("")
-    print("CONTROL CALLING LUNAR MODULE. MANUAL CONTROL IS NECESSARY")
-    print("YOU MAY RESET FUEL RATE K EACH 10 SECS TO 0 OR ANY VALUE")
-    print("BETWEEN 8 & 200 LBS/SEC. YOU'VE 16000 LBS FUEL. ESTIMATED")
-    print("FREE FALL IMPACT TIME-120 SECS. CAPSULE WEIGHT-32500 LBS")
-    print("FIRST RADAR CHECK COMING UP")
+    print("LUNAR LANDING GAME")
+    print("THE AIM IS TO SECURELY LAND THE SPACECRAFT ON THE MOON")
+    print("YOU CONTROL THE FUEL RATE FOR THE NEXT 10 SECS")
+    print("VALID FUEL RATES ARE 0 OR BETWEEN 8 & 200 LBS/SEC.")
+    print("YOU'VE 16000 LBS FUEL. ESTIMATED")
     print("")
     print("")
     print("COMMENCE LANDING PROCEDURE")

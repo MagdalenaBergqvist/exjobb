@@ -1,5 +1,5 @@
-var delayer = (function() {
 
+var delayer = (function() {
   var delayId;
   var delayerStack = [];
   var delayTime = 75; // in millis

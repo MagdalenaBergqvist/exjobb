@@ -8,4 +8,19 @@ FIRST RADAR CHECK COMING UP
 
 COMMENCE LANDING PROCEDURE
 TIME,SECS   ALTITUDE,MILES+FEET   VELOCITY,MPH   FUEL,LBS   FUEL RATE
-       0       120       0       3600       16000       K=:
+       0       120       0       3600.00       16000.0       K=:
+       10       120       0       3600.00       14000.0       K=:
+       20       120       0       3600.00       12000.0       K=:
+       30       120       0       3600.00       10000.0       K=:
+       40       120       0       3600.00       8000.0       K=:
+       50       120       0       3600.00       6000.0       K=:
+       60       120       0       3600.00       4000.0       K=:
+       70       120       0       3600.00       2000.0       K=:
+FUEL OUT AT       80 SECS
+ON THE MOON AT   641.12 SECS
+IMPACT VELOCITY OF  1515.42 M.P.H.
+FUEL LEFT:       0 LBS
+SORRY,BUT THERE WERE NO SURVIVORS-YOU BLEW IT!
+IN FACT YOU BLASTED A NEW LUNAR CRATER   420.94 FT. DEEP
+TRY AGAIN?
+(ANS. YES OR NO):

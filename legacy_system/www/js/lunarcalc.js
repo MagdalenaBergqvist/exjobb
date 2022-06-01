@@ -9,8 +9,7 @@ var lunarcalc = {};
 /**
  * Function, that returns an iterator (object with method 'next') doing the lunar landing calculation.
  */
-lunarcalc.createIterator = function() {
-
+lunarcalc.createIterator = function(x) {
   // Initial values; state of the iterator
   var L = 0; // Time (seconds)
   var A = 120; // Altitude (miles)
@@ -171,5 +170,4 @@ lunarcalc.createIterator = function() {
   return {
     next: next
   }
-
 };

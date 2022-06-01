@@ -85,6 +85,11 @@ def test_number_of_outputs():
     run_system([10,10,10,10,10,10], "output_system.txt")
     assert(check_number_of_values())
 
+def test_game_ending():
+    run_system([200, 200, 200, 200, 200, 200, 200, 200], "output_system.txt")
+    run_model([], "output_model.txt", "200 200 200 200 200 200 200 200")
+    assert(check_output_lines(12,13))
+
 def check_output_lines(startline, endine):
     with open('output_model.txt') as file_1:
         file_1_text = file_1.readlines()
@@ -227,7 +232,8 @@ def test_suit():
     #test_initial_values()
     #test_wrong_input_format()
     #test_invalid_input()
-    test_number_of_outputs()
+    #test_number_of_outputs()
+    test_game_ending()
 
 if __name__ == "__main__":
     test_suit()

@@ -1,5 +1,5 @@
-var delayer = (function() {
 
+var delayer = (function() {
   var delayId;
   var delayerStack = [];
   var delayTime = 75; // in millis
@@ -38,10 +38,11 @@ var delayer = (function() {
     delay: delay
   };
 
-})();/**
+})();
+/**
  * Transcription of Storer's lunar lander FOCAL code to JavaScript.
  * Variable names and line numbers are taken from there. See:
- * https://www.cs.brandeis.edu/~storer/LunarLander/LunarLander/LunarLanderListing.jpg 
+ * https://www.cs.brandeis.edu/~storer/LunarLander/LunarLander/LunarLanderListing.jpg
  */
 
 var lunarcalc = {};
@@ -50,10 +51,11 @@ var lunarcalc = {};
  * Function, that returns an iterator (object with method 'next') doing the lunar landing calculation.
  */
 lunarcalc.createIterator = function() {
-
+console.log(delayer);
   // Initial values; state of the iterator
   var L = 0; // Time (seconds)
   var A = 120; // Altitude (miles)
+
   var V = 1; // Velocity (miles/second)
   var M = 32500; // Total weight (LBS)
 
@@ -114,7 +116,7 @@ lunarcalc.createIterator = function() {
         break;
       }
 
-      // 
+      //
       if (V > 0 && J < 0) {
         var result = calcDeepestPoint();
         if (result === "onTheMoon") {
@@ -188,7 +190,7 @@ lunarcalc.createIterator = function() {
         return "onTheMoon";
       }
       transferNewValues();
-      // Always true. A joke? 
+      // Always true. A joke?
       if (J >= 0 || V <= 0) {
         return "continue";
       }
@@ -210,8 +212,8 @@ lunarcalc.createIterator = function() {
   return {
     next: next
   }
-
-};/**
+};
+/**
  * Object with method 'run'.
  */
 var lunarcontrol = (function(myLunarCalc) {
@@ -229,7 +231,7 @@ var lunarcontrol = (function(myLunarCalc) {
    * myInOut is an object implementing two functions log and prompt.
    * log should accept a string for output and prompt should accept a string for output
    * and a callback function for input. The callback should be called with the string input.
-   * 
+   *
    * myControlOutCallback is called, when user choose 'CONTROL OUT'.
    */
   var run = function(myInOut, myControlOutCallback) {
@@ -246,15 +248,15 @@ var lunarcontrol = (function(myLunarCalc) {
   /**
    * round(1.1234, 2) = "1.12"
    * round(1.995, 2) = "2.00"
-   * 
-   * @param {Number} x 
-   * @param {Integer} d digits, d > 0 
+   *
+   * @param {Number} x
+   * @param {Integer} d digits, d > 0
    * @returns {String}
    */
   var round = function(x, d) {
 
     var pow = Math.pow(10, d);
-    var x = Math.round(x * pow) / pow; 
+    var x = Math.round(x * pow) / pow;
     var trunc = Math.trunc(x);
     var decimals = Math.abs(x - trunc);
     trunc = Math.abs(trunc);
@@ -318,7 +320,7 @@ var lunarcontrol = (function(myLunarCalc) {
 
   /**
    * @param {*} value
-   * @returns {String} 
+   * @returns {String}
    */
   var getResultLine = function(value) {
     var L = value.time;
@@ -394,7 +396,8 @@ var lunarcontrol = (function(myLunarCalc) {
     run: run
   };
 
-}) (lunarcalc);// add libraries lunarcontrol and delayer
+}) (lunarcalc);
+// add libraries lunarcontrol and delayer
 
 (function(myLunarcontrol, myDelayer) {
 
